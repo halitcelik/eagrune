@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E&A Grüne GmbH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        header {
+            display: flex;
+            height: 100vh;
+            flex-direction: row;
+        }
+        .service-section {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .service-section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .service-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        .service-section div {
+            margin-bottom: 20px;
+        }
+        .service-section h2 {
+            margin-bottom: 10px;
+        }
+        .service-section button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .service {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            background-color: #f9f9f9;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        footer {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: 100vh;
+            }
+            .service-section {
+                height: 50vh;
+            }
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+        .swiper {
+            width: 100%;
+            height: auto;
+            }
+
+            .swiper-slide img {
+            width: auto;
+            height: 500px;
+            }
+
+    </style>
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</head>
+<body>
+
+<nav>
+    <img class="logo" src="images/logo.svg" alt="">
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<header>
+    <div class="service-section" id="cleaning">
+        <img src="/images/eagrune-cleaning-5.jpeg" alt="Reinigungsdienste">
+        <div>
+            <h2>Reinigungsdienste</h2>
+            <p>Professionelle Reinigung, die auf Ihre Bedürfnisse zugeschnitten ist. Makellose Ergebnisse jedes Mal.</p>
+            <button onclick="document.location='#reinigungsdienste'">Details</button>
+        </div>
+    </div>
+    <div class="service-section" id="scaffolding">
+        <img src="/images/eagrune-scaff-4.jpeg" alt="Gerüstbaudienste">
+        <div>
+            <h2>Gerüstbaudienste</h2>
+            <p>Fachgerechte Montage und Demontage für alle Projekte, mit Fokus auf Sicherheit und Effizienz.</p>
+            <button onclick="document.location='#gerustbaudienste'">Details</button>
+        </div>
+    </div>
+</header>
+
+<section id="about">
+    <h2>Über uns</h2>
+    <p>Willkommen bei E&A Grüne GmbH! Wir sind ein Team hochqualifizierter Fachleute, die sich der Bereitstellung erstklassiger Reinigungs- und Gerüstbaudienste widmen.</p>
+</section>
+
+<section>
+    <h2>Unsere Dienstleistungen</h2>
+    <div class="services">
+        <div class="service" id="reinigungsdienste">
+            <h3>Reinigung</h3>
+            <p>Professionelle Reinigungsdienste, die auf Ihre Bedürfnisse zugeschnitten sind. Wir sorgen für makellose Ergebnisse.</p>
+
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-cleaning-1.jpg" alt="Reinigungsdienste">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-cleaning-2.jpeg" alt="Reinigungsdienste">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-cleaning-3.jpeg" alt="Reinigungsdienste">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-cleaning-4.jpeg" alt="Reinigungsdienste">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-cleaning-5.jpeg" alt="Reinigungsdienste">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-cleaning-6.jpeg" alt="Reinigungsdienste">
+                </div>
+                ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+            
+
+        </div>
+        <div class="service" id="gerustbaudienste">
+            <h3>Gerüstbau</h3>
+            <p>Fachgerechte Montage und Demontage von Gerüsten für alle Arten von Projekten, mit Schwerpunkt auf Sicherheit und Effizienz.</p>
+
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-scaff-1-.jpeg" alt="Reinigungsdienste">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-scaff-2.jpeg" alt="Reinigungsdienste">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-scaff-3.jpg" alt="Reinigungsdienste">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/images/eagrune-scaff-4.jpeg" alt="Reinigungsdienste">
+                </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+            
+
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <p>Wir sind auf Deutsch, Französisch und Italienisch für Sie da.</p>
+    <div>
+        <p><strong>Deutsch/Französisch:</strong> +41 76 616 33 62</p>
+        <p><strong>Italienisch:</strong> +41 76 812 47 38</p>
+        <p><strong>Email:</strong> eagrunegmbh@gmail.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 E&A Grüne GmbH. Alle Rechte vorbehalten.</p>
+</footer>
+<script>
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+</script>
+</body>
+</html>
